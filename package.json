@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-es-toolkit-module",
+  "version": "1.0.1",
+  "type": "module",
+  "license": "MIT",
+  "main": "dist/module.js",
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.ts",
+      "import": "./dist/module.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/module.ts --format esm --dts --shims --minify --external nuxt --out-dir dist",
+    "dev": "tsup src/module.ts --watch --format esm --dts --shims --external nuxt --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "nuxt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}
