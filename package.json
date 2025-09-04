@@ -1,9 +1,10 @@
 {
   "name": "nuxt-es-toolkit-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "license": "MIT",
   "main": "dist/module.js",
+  "repository": "https://github.com/TeG2405/nuxt-es-toolkit-module",
   "exports": {
     ".": {
       "types": "./dist/module.d.ts",
